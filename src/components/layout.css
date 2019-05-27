@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'KFGQPC_Naskh';
+  src: url('/fonts/KFC_naskh.eot');
+  src: local('KFGQPC Uthman Taha Naskh'),
+  url('/fonts/KFC_naskh.otf') format('opentype');
+}
+
+html, body {
+  font-family: 'KFGQPC_Naskh';
+  font-size: 20px;
+}
+.toggleMe.react-toggle--checked .react-toggle-track {
+  background-color:yellow;
+}
+.toggleMe.react-toggle--hover .react-toggle-track {
+  background-color:yellow;
+ 
+}
+.toggleMe.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color:yellow;
+}
+.react-toggle-track .react-toggle-track-x, .react-toggle-track .react-toggle-track-check {
+  height: 0;
+  font-size:12px;
+}

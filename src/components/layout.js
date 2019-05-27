@@ -8,11 +8,15 @@
 import React, {useState} from "react"
 import PropTypes from "prop-types"
 import {StaticQuery, graphql} from "gatsby"
-
+import styled from "@emotion/styled/macro"
 import Header from "./header"
 import "./layout.css"
 import "react-toggle/style.css"
 
+const Anchor = styled.a `
+  display: inline-block;
+  margin: 0 12px;
+`;
 const Layout = ({children}) => {
   const [dark,
     setDark] = useState(false);
@@ -39,9 +43,15 @@ const Layout = ({children}) => {
           paddingTop: 0
         }}>
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <footer style={{
+            fontFamily: "Tahoma"
+          }}>
+            © {new Date().getFullYear()}
+            {" "}
+            Built with:
+            <Anchor href="https://www.gatsbyjs.org">Gatsby</Anchor>
+            <Anchor href="https://www.netlify.come">Netlify</Anchor>
+            <Anchor href="https://github.com/ALYREZA/jawshan">Source Code</Anchor>
           </footer>
         </div>
       </div>

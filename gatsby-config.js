@@ -39,16 +39,16 @@ module.exports = {
         cacheId: `gatsby-plugin-offline`,
         // Don't cache-bust JS or CSS files, and anything in the static directory, since
         // these files have unique URLs and their contents will never change
-        dontCacheBustUrlsMatching: /(\.js$|\.css$|static\/)/,
+        dontCacheBustUrlsMatching: /(\.js$|\.css$|static\/|fonts\/)/,
         runtimeCaching: [
           {
             // Use cacheFirst since these don't need to be revalidated (same RegExp and same
             // reason as above)
-            urlPattern: /(\.js$|\.css$|static\/)/,
+            urlPattern: /(\.js$|\.css$|static\/|fonts\/)/,
             handler: `cacheFirst`
           }, {
             // Add runtime caching of various other page resources
-            urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
+            urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css|otf|eot)$/,
             handler: `staleWhileRevalidate`
           }, {
             // Google Fonts CSS (doesn't end in .css so we need to specify it)

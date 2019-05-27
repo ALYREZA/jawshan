@@ -28,7 +28,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#00524D`,
         theme_color: `#00524D`,
-        display: `standalone`,
+        display: `fullscreen`,
         icon: `${__dirname}/src/images/jawshan.png`, // This path is relative to the root of the site.
       }
     }, {
@@ -36,7 +36,6 @@ module.exports = {
       options: {
         importWorkboxFrom: `local`,
         globDirectory: `${__dirname}`,
-        globPatterns,
         cacheId: `gatsby-plugin-offline`,
         // Don't cache-bust JS or CSS files, and anything in the static directory, since
         // these files have unique URLs and their contents will never change

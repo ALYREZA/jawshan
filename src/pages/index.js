@@ -9,11 +9,13 @@ const Wrapper = styled.div `
   text-align: right;
 
 `;
-const List = styled.h1 `
+const List = styled.h2 `
   color: inherit;
   margin-bottom: 5px;
-  padding: 12px 20px;
-  line-height: 65px;
+  padding: 12px 10px;
+  text-align: justify;
+  font-size: 41px;
+  line-height: 70px;
 `;
 
 const IndexPage = () => {
